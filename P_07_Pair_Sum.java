@@ -25,7 +25,7 @@ public class P_07_Pair_Sum {
         for (int num : nums) {
             int req = k - num;
             if (map.containsKey(req)) {
-                pairs += map.get(req);
+                pairs = pairs + map.get(req);
             }
             if (map.containsKey(num)) {
                 map.put(num, map.get(num) + 1);
