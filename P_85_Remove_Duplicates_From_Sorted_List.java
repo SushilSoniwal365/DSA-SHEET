@@ -19,6 +19,7 @@ public class P_85_Remove_Duplicates_From_Sorted_List {
 
     // https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 
+    // ? T.C = O(n) & S.C = O(1).
     public static ListNode deleteDuplicates(ListNode head) {
         ListNode temp = head;
         while (temp != null) {
