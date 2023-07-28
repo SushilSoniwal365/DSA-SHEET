@@ -1,5 +1,8 @@
 public class P_96_Segregate_Even_And_Odd_Nodes_In_LinkedList {
 
+    // https://shorturl.at/eiSX2
+
+    // ? T.C = O(n) & S.C = O(1).
     public static Node divide(int N, Node head) {
         // Check for empty list or a list with only one node
         if (head == null || head.next == null) {
