@@ -1,3 +1,5 @@
+import Classes.ListNode;
+
 public class P_90_Delete_The_Middle_Node_Of_A_Linked_List {
 
     // https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
