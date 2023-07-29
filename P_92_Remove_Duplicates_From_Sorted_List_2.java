@@ -1,3 +1,5 @@
+import Classes.ListNode;
+
 public class P_92_Remove_Duplicates_From_Sorted_List_2 {
 
     // https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
