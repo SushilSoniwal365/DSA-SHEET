@@ -1,3 +1,5 @@
+import Classes.ListNode;
+
 public class P_99_Merge_Two_Sorted_LinkedList {
 
     // https://leetcode.com/problems/merge-two-sorted-lists/description/
