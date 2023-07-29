@@ -1,3 +1,5 @@
+import Classes.Node;
+
 public class P_96_Segregate_Even_And_Odd_Nodes_In_LinkedList {
 
     // https://shorturl.at/eiSX2
