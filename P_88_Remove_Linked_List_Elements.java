@@ -1,3 +1,5 @@
+import Classes.ListNode;
+
 public class P_88_Remove_Linked_List_Elements {
 
     // https://leetcode.com/problems/remove-linked-list-elements/description/
