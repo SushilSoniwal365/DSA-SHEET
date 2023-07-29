@@ -1,50 +1,45 @@
 public class P_101_Sort_Colors_List {
 
+    // https://practice.geeksforgeeks.org/problems/given-a-linked-list-of-0s-1s-and-2s-sort-it/1
+
+    // ? T.C = O(n) & S.C = O(1).
     public static Node segregate(Node head) {
-        Node zh = new Node(-1);
-        Node zt = zh;
-        Node oh = new Node(-1);
-        Node ot = oh;
-        Node th = new Node(-1);
-        Node tt = th;
-
-        Node temp = head;
-        while (temp != null) {
-            int val = temp.data;
-
-            if (val == 0) {
-                zt.next = temp;
-                zt = zt.next;
-            }
-
-            else if (val == 1) {
-                ot.next = temp;
-                ot = ot.next;
-            }
-
-            else {
-                tt.next = temp;
-                tt = tt.next;
-            }
-
-            temp = temp.next;
+        if (head == null || head.next == null) {
+            // If the list is empty or has only one element, it is already sorted
+            return head;
         }
 
-        zt.next = oh.next;
-        ot.next = th.next;
-        tt.next = null;
+        // Initialize three dummy nodes to create three partitions
+        Node zeroDummy = new Node(-1);
+        Node oneDummy = new Node(-1);
+        Node twoDummy = new Node(-1);
+        Node zeroTail = zeroDummy;
+        Node oneTail = oneDummy;
+        Node twoTail = twoDummy;
 
-        if (oh == ot) {
-            zt.next = th.next;
+        // Traverse the original list and place nodes into respective partitions
+        Node current = head;
+        while (current != null) {
+            if (current.data == 0) {
+                zeroTail.next = current;
+                zeroTail = zeroTail.next;
+            } else if (current.data == 1) {
+                oneTail.next = current;
+                oneTail = oneTail.next;
+            } else {
+                twoTail.next = current;
+                twoTail = twoTail.next;
+            }
+            current = current.next;
         }
-        if (zt != zh) {
-            head = zh.next;
-        } else if (zt == zh && ot != oh) {
-            head = oh.next;
-        } else if (zt == zh && ot == oh && tt != th) {
-            head = th.next;
-        }
-        return head;
+
+        // Connect the three partitions together
+        zeroTail.next = oneDummy.next != null ? oneDummy.next : twoDummy.next;
+        oneTail.next = twoDummy.next;
+        twoTail.next = null;
+
+        // The head of the sorted list is the next node of the zeroDummy node
+        return zeroDummy.next;
     }
 
     public static void main(String[] args) {
