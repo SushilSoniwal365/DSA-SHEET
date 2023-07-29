@@ -1,3 +1,5 @@
+import Classes.Node;
+
 public class P_94_Length_Of_Loop {
 
     // https://rb.gy/5q9dl
