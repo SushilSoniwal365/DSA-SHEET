@@ -1,3 +1,5 @@
+import Classes.ListNode;
+
 public class P_100_Sort_List {
 
     // https://leetcode.com/problems/sort-list/description/
