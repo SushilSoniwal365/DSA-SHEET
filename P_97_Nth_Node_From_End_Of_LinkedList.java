@@ -1,3 +1,5 @@
+import Classes.Node;
+
 public class P_97_Nth_Node_From_End_Of_LinkedList {
 
     // https://shorturl.at/cK048
