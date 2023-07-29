@@ -1,3 +1,5 @@
+import Classes.ListNode;
+
 public class P_93_Linked_List_Cycle_2 {
 
     // https://leetcode.com/problems/linked-list-cycle-ii/description/
