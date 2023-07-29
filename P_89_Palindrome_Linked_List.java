@@ -1,3 +1,5 @@
+import Classes.ListNode;
+
 public class P_89_Palindrome_Linked_List {
 
     // https://leetcode.com/problems/palindrome-linked-list/
