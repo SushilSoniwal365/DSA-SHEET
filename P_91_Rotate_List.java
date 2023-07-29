@@ -1,3 +1,5 @@
+import Classes.ListNode;
+
 public class P_91_Rotate_List {
 
     // https://leetcode.com/problems/rotate-list/
