@@ -1,12 +1,4 @@
-class Node {
-    int data;
-    Node next;
-
-    Node(int d) {
-        data = d;
-        next = null;
-    }
-}
+import Classes.Node;
 
 public class P_84_Length_Of_Linked_List {
 
