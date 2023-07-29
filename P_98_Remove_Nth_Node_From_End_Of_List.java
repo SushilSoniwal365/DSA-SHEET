@@ -1,3 +1,5 @@
+import Classes.ListNode;
+
 public class P_98_Remove_Nth_Node_From_End_Of_List {
 
     // ? T.C = O(n) & S.C = O(1).
