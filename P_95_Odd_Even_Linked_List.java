@@ -1,3 +1,5 @@
+import Classes.ListNode;
+
 public class P_95_Odd_Even_Linked_List {
 
     public static ListNode oddEvenList(ListNode head) {
