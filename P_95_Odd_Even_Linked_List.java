@@ -2,6 +2,9 @@ import Classes.ListNode;
 
 public class P_95_Odd_Even_Linked_List {
 
+    // https://leetcode.com/problems/odd-even-linked-list/
+
+    // ? T.C = O(n) & S.C = O(1).
     public static ListNode oddEvenList(ListNode head) {
         // Check for empty list or a list with only one node
         if (head == null || head.next == null) {
