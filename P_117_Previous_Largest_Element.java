@@ -7,7 +7,7 @@ public class P_117_Previous_Largest_Element {
     // https://www.geeksforgeeks.org/previous-greater-element/
 
     // ? T.C = O(n) & S.C = O(n).
-    public static List<Integer> leftSmaller(int n, int arr[]) {
+    public static List<Integer> leftLargest(int n, int arr[]) {
         List<Integer> list = new ArrayList<>();
         Stack<Integer> stack = new Stack<>();
 
@@ -28,7 +28,7 @@ public class P_117_Previous_Largest_Element {
 
     public static void main(String[] args) {
         int[] arr = { 10, 4, 2, 20, 40, 12, 30 };
-        List<Integer> res = leftSmaller(arr.length, arr);
+        List<Integer> res = leftLargest(arr.length, arr);
         System.out.println(res);
     }
 }
