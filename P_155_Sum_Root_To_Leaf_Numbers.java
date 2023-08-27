@@ -30,11 +30,11 @@ public class P_155_Sum_Root_To_Leaf_Numbers {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);
+        TreeNode root = new TreeNode(4);
         root.left = new TreeNode(9);
-        root.right = new TreeNode(6);
-        root.right.left = new TreeNode(5);
-        root.right.right = new TreeNode(7);
+        root.right = new TreeNode(0);
+        root.left.left = new TreeNode(5);
+        root.left.right = new TreeNode(1);
 
         System.out.println(sumNumbers(root));
     }
