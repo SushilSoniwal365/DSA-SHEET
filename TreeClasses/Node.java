@@ -1,12 +1,12 @@
 package TreeClasses;
 
 public class Node {
-    public int val;
+    public int data;
     public Node left;
     public Node right;
 
-    public Node(int val) {
-        this.val = val;
+    public Node(int data) {
+        this.data = data;
         left = right = null;
     }
 }
