@@ -7,15 +7,15 @@ public class P_159_Symmetric_Tree {
 
     // https://leetcode.com/problems/symmetric-tree/description/
 
-    // ! T.C = O(n) & S.C = O(h).
+    // ! T.C = O(n) & S.C = O(n).
     public static boolean isSymmetric(TreeNode root) {
         if (root == null) {
             return true; // An empty tree is symmetric
         }
 
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        queue.offer(root);
+        queue.offer(root.left);
+        queue.offer(root.right);
 
         while (!queue.isEmpty()) {
             TreeNode leftNode = queue.poll();
