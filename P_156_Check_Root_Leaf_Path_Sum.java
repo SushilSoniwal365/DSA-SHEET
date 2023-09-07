@@ -11,7 +11,7 @@ public class P_156_Check_Root_Leaf_Path_Sum {
         }
 
         // Subtract the current node's value from the target sum.
-        sum -= root.val;
+        sum -= root.data;
 
         // If it's a leaf node and the remaining sum is 0, we found a valid path.
         if (root.left == null && root.right == null && sum == 0) {
