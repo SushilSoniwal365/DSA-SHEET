@@ -17,7 +17,7 @@ public class P_143_Check_Identical_Tree {
         }
 
         // Check if the values of the current nodes are equal.
-        if (r1.val != r2.val) {
+        if (r1.data != r2.data) {
             return false;
         }
 
