@@ -15,11 +15,11 @@ public class P_148_Boundary_Traversal {
         }
 
         if (root.left == null && root.right == null) {
-            result.add(root.val);
+            result.add(root.data);
             return result;
         }
 
-        result.add(root.val);
+        result.add(root.data);
 
         // Add left boundary.
         leftTraversal(root.left, result);
@@ -38,7 +38,7 @@ public class P_148_Boundary_Traversal {
         if ((node == null) || (node.left == null && node.right == null)) {
             return;
         }
-        result.add(node.val);
+        result.add(node.data);
 
         if (node.left != null) {
             leftTraversal(node.left, result);
@@ -54,7 +54,7 @@ public class P_148_Boundary_Traversal {
         }
 
         if (node.left == null && node.right == null) {
-            result.add(node.val);
+            result.add(node.data);
         }
 
         leafTraversal(node.left, result);
@@ -73,7 +73,7 @@ public class P_148_Boundary_Traversal {
             rightTraversal(node.left, result);
         }
 
-        result.add(node.val);
+        result.add(node.data);
     }
 
     public static void main(String[] args) {
