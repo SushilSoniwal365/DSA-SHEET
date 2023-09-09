@@ -13,15 +13,15 @@ public class P_144_Sum_Tree {
             return 0;
         }
         if (root.left == null && root.right == null) {
-            return root.val;
+            return root.data;
         }
         int left = sum(root.left);
         int right = sum(root.right);
 
-        if (left + right != root.val) {
+        if (left + right != root.data) {
             ans = false;
         }
-        return left + right + root.val;
+        return left + right + root.data;
     }
 
     public static boolean isSumTree(Node root) {
