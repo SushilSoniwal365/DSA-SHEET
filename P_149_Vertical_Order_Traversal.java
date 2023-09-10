@@ -30,10 +30,10 @@ public class P_149_Vertical_Order_Traversal {
             Pair current = queue.poll();
 
             if (map.containsKey(current.hd)) {
-                map.get(current.hd).add(current.node.val);
+                map.get(current.hd).add(current.node.data);
             } else {
                 ArrayList<Integer> temp = new ArrayList<>();
-                temp.add(current.node.val);
+                temp.add(current.node.data);
                 map.put(current.hd, temp);
             }
 
