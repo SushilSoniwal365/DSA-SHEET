@@ -35,7 +35,7 @@ public class P_151_Top_View_Of_Binary_Tree {
 
             if (!map.containsKey(current.hd)) {
                 ArrayList<Integer> temp = new ArrayList<>();
-                temp.add(current.node.val);
+                temp.add(current.node.data);
                 map.put(current.hd, temp);
             }
 
