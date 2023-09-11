@@ -34,7 +34,7 @@ public class P_152_Bottom_View_Of_Binary_Tree {
             Pair current = queue.poll();
 
             ArrayList<Integer> temp = new ArrayList<>();
-            temp.add(current.node.val);
+            temp.add(current.node.data);
             map.put(current.hd, temp);
 
             if (current.node.left != null) {
