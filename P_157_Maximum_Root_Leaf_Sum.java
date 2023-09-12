@@ -14,7 +14,7 @@ public class P_157_Maximum_Root_Leaf_Sum {
             return Integer.MIN_VALUE;
         }
 
-        currentSum = currentSum + node.val; // Update the current sum.
+        currentSum = currentSum + node.data; // Update the current sum.
 
         // Check if it's a leaf node (both left and right are null).
         if (node.left == null && node.right == null) {
