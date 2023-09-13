@@ -20,8 +20,8 @@ public class P_163_Kth_Ancestor_In_A_Tree {
     public static int solve(Node root, ArrayList<Integer> path, int node) {
         if (root == null)
             return 0;
-        if (root.val == node || solve(root.left, path, node) == 1 || solve(root.right, path, node) == 1) {
-            path.add(root.val);
+        if (root.data == node || solve(root.left, path, node) == 1 || solve(root.right, path, node) == 1) {
+            path.add(root.data);
             return 1;
         }
         return 0;
