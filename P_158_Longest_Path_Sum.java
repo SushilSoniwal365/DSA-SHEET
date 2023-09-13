@@ -22,13 +22,13 @@ public class P_158_Longest_Path_Sum {
         if (root.left == null && root.right == null) {
             if (len >= maxLen) {
                 maxLen = len;
-                sum += root.val;
+                sum += root.data;
                 maxSum = sum;
                 return;
             }
         }
-        solve(root.left, sum + root.val, len + 1);
-        solve(root.right, sum + root.val, len + 1);
+        solve(root.left, sum + root.data, len + 1);
+        solve(root.right, sum + root.data, len + 1);
     }
 
     public static void main(String[] args) {
