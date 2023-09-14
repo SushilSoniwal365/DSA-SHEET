@@ -19,7 +19,7 @@ public class P_164_Root_To_Leaf_Paths {
     public static void solve(Node root, ArrayList<Integer> list, ArrayList<ArrayList<Integer>> res) {
         if (root == null)
             return;
-        list.add(root.val);
+        list.add(root.data);
         if (root.left == null && root.right == null) {
             res.add(new ArrayList<>(list));
         }
