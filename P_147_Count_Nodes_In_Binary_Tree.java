@@ -7,7 +7,7 @@ public class P_147_Count_Nodes_In_Binary_Tree {
 
     // https://leetcode.com/problems/count-complete-tree-nodes/
 
-    // ? T.C = O(n) & S.C = O(n).
+    // Todo:- Using BFS => T.C = O(n) & S.C = O(n).
     public static int countNodes(TreeNode root) {
         if (root == null) {
             return 0;
@@ -28,6 +28,16 @@ public class P_147_Count_Nodes_In_Binary_Tree {
         return count;
     }
 
+    // Todo:- Using DFS => T.C = O(n) & S.C = O(n).
+    public static int countNodes2(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = countNodes2(root.left);
+        int right = countNodes2(root.right);
+        return left + right + 1;
+    }
+
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
@@ -37,7 +47,7 @@ public class P_147_Count_Nodes_In_Binary_Tree {
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
 
-        System.out.println(countNodes(root));
+        System.out.println(countNodes2(root));
     }
 
 }
