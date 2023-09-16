@@ -7,8 +7,8 @@ public class P_148_Symmetric_Tree {
 
     // https://leetcode.com/problems/symmetric-tree
 
-    // ? T.C = O(n) & S.C = O(n).
-    public static boolean isSymmetric(TreeNode root) {
+    // Todo:- Using BFS => T.C = O(n) & S.C = O(n).
+    public static boolean isSymmetric1(TreeNode root) {
         if (root == null || (root.left == null && root.right == null)) {
             return true;
         }
@@ -37,6 +37,24 @@ public class P_148_Symmetric_Tree {
         return true;
     }
 
+    // Todo:- Using DFS => T.C = O(n) & S.C = O(n).
+    public static boolean isSymmetric2(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        return check(root.left, root.right);
+    }
+
+    public static boolean check(TreeNode root1, TreeNode root2) {
+        if (root1 == null && root2 == null) {
+            return true;
+        }
+        if (root1 == null || root2 == null || root1.val != root2.val) {
+            return false;
+        }
+        return check(root1.left, root2.right) && check(root1.right, root2.left);
+    }
+
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
@@ -46,7 +64,7 @@ public class P_148_Symmetric_Tree {
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
 
-        System.out.println(isSymmetric(root));
+        System.out.println(isSymmetric2(root));
     }
 
 }
