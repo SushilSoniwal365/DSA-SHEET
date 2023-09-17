@@ -2,6 +2,8 @@ import TreeClasses.Node;
 
 public class P_167_Longest_Path_Sum {
 
+    // https://practice.geeksforgeeks.org/problems/sum-of-the-longest-bloodline-of-a-tree/1
+
     // ? T.C = O(n) & S.C = O(n).
     static int maxLen;
     static int maxSum;
