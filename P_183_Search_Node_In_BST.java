@@ -5,18 +5,21 @@ public class P_183_Search_Node_In_BST {
     // https://leetcode.com/problems/search-in-a-binary-search-tree/
 
     // ? T.C = O(h) & S.C = O(h).
-    public static TreeNode searchBST(TreeNode root, int target) {
+    public static TreeNode searchBST(TreeNode root, int val) {
         if (root == null) {
             return null;
         }
-        if (root.val == target) {
-            return root;
+        TreeNode curr = root;
+        while (curr != null) {
+            if (curr.val == val) {
+                return curr;
+            } else if (curr.val > val) {
+                curr = curr.left;
+            } else {
+                curr = curr.right;
+            }
         }
-        if (root.val > target) {
-            return searchBST(root.left, target);
-        } else {
-            return searchBST(root.right, target);
-        }
+        return null;
     }
 
     public static void main(String[] args) {
