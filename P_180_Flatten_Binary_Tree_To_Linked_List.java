@@ -2,14 +2,14 @@ import TreeClasses.TreeNode;
 
 public class P_180_Flatten_Binary_Tree_To_Linked_List {
 
-    // https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/
+     // https://leetcode.com/problems/fla ten-binary-tree-to-linked-list/description/
 
     // ! T.C = O(n) & S.C = O(1).
     public static void flatten(TreeNode root) {
         TreeNode curr = root;
         while (curr != null) {
             if (curr.left != null) {
-                TreeNode temp = curr.left;
+                TreeNode temp = curr.left; 
                 while (temp.right != null) {
                     temp = temp.right;
                 }
