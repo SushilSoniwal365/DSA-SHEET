@@ -4,7 +4,7 @@ public class P_185_Ceil_In_BST {
 
     // https://practice.geeksforgeeks.org/problems/implementing-ceil-in-bst/1
 
-    // ? T.C = O(n) & S.C = O(h).
+    // ? T.C = O(n) & S.C = O(1).
     public static int findCeil(Node root, int key) {
         int ceil = -1;
         while (root != null) {
