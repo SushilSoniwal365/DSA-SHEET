@@ -4,7 +4,7 @@ public class P_187_Kth_Smallest_Element_In_BST {
 
     // https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/
 
-    // ? T.C = O(n) & O(h).
+    // ? T.C = O(n) & S.C O(h).
     static int count;
     static int ans;
 
