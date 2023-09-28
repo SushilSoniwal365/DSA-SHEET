@@ -1,33 +1,47 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 
 public class P_210_Find_K_Closest_Elements {
 
+    static class Pair implements Comparable<Pair> {
+        int data;
+        int sum;
+
+        Pair(int d, int s) {
+            this.data = d;
+            this.sum = s;
+        }
+
+        public int compareTo(Pair ob) {
+            if (ob.sum == this.sum) {
+                return this.data - ob.data;
+            }
+            return this.sum - ob.sum;
+        }
+    }
+
     // https://leetcode.com/problems/find-k-closest-elements/description/
 
-    // ? T.C = O(nlogk) & S.C = O(k).
+    // ? T.C = O(nlogk) & S.C = O(n+k).
     public static List<Integer> findClosestElements(int[] arr, int k, int x) {
-        if (arr == null || arr.length == 0)
-            return new ArrayList<>();
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
-        List<Integer> result = new ArrayList<>();
+        PriorityQueue<Pair> pq = new PriorityQueue<Pair>();
+        List<Integer> al = new ArrayList<Integer>();
         for (int i = 0; i < arr.length; i++) {
-            if (k-- > 0) {
-                pq.offer(arr[i]);
-            } else if (Math.abs(pq.peek() - x) > Math.abs(arr[i] - x)) {
-                pq.poll();
-                pq.offer(arr[i]);
-            }
+            pq.add(new Pair(arr[i], Math.abs(arr[i] - x)));
         }
-        while (!pq.isEmpty()) {
-            result.add(pq.poll());
+
+        for (int i = 0; i < k; i++) {
+            Pair curr = pq.poll();
+            al.add(curr.data);
         }
-        return result;
+        Collections.sort(al);
+        return al;
     }
 
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4, 5 };
-        System.out.println(findClosestElements(arr, 3, 3));
+        System.out.println(findClosestElements(arr, 4, 3));
     }
 }
